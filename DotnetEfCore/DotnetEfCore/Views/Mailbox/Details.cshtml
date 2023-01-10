@@ -1,0 +1,57 @@
+﻿@model DotnetEfCore.DataContext.MailboxEntity
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Detail Mailbox</h2>
+<table class="table table-bordered">
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <td>@Model.Id</td>
+        </tr>
+        <tr>
+            <th>Username Sending</th>
+            <td>@Model.Username</td>
+        </tr>
+        <tr>
+            <th>ToRecipients</th>
+            <td>@Model.ToRecipients</td>
+        </tr>
+
+        <tr>
+            <th>CCRecipients</th>
+            <td>@Model.CCRecipients</td>
+        </tr>
+
+        <tr>
+            <th>Subject</th>
+            <td>@Model.Subject</td>
+        </tr>
+
+        <tr>
+            <th>Body</th>
+            <td>@Model.Body</td>
+        </tr>
+
+        <tr>
+            <th>Attachment</th>
+            <td>@Model.Attachment</td>
+        </tr>
+
+        <tr>
+            <th>Scheduled</th>
+            <td>@Model.Scheduled</td>
+        </tr>
+
+        <tr>
+            <th>StatusDone</th>
+            <td>@Model.StatusDone</td>
+        </tr>
+
+    </tbody>
+</table>
+
+<a class="btn btn-sm btn-primary" asp-area="" asp-controller="Mailbox" asp-action="GetAll">Back</a>

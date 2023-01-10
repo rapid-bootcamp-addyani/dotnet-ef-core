@@ -1,0 +1,43 @@
+﻿@model DotnetEfCore.DataContext.EmployeeEntity
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>Add New Employee</h2>
+<form asp-controller="Employee" asp-action="Save" method="post">
+    <div class="form-group">
+        <label asp-for="Name">Name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Email">Email</label>
+        <input asp-for="Email" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Phone">Phone</label>
+        <input asp-for="Phone" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Address">Address</label>
+        <input asp-for="Address" class="form-control">
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Position">Position</label>
+        <select class="form-select" aria-label="Set Position" id="Position" name="Position">
+            <option selected>Select Position Here</option>
+            <option value="QA">QA</option>
+            <option value="BE">BE</option>
+            <option value="FE">FE</option>
+        </select>
+    </div>
+
+    <div class="form-footer">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</form>
